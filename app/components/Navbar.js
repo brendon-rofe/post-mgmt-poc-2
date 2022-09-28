@@ -8,7 +8,6 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
-  Center,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
