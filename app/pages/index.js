@@ -16,8 +16,8 @@ export default function Home() {
   const [pubIds, setPubids] = useState([]);
 
   useEffect(() => {
-    // fetchPublications();
-    // getUserPostIds();
+    fetchPublications();
+    getUserPostIds();
   }, [])
 
   async function getUserPostIds() {
@@ -40,11 +40,11 @@ export default function Home() {
       <h1>Lens Post Manager POC</h1>
       <Button onClick={fetchPublications}>Get publications</Button>
       <Button onClick={getUserPostIds}>Get Ids</Button>
-      {/* {
+      {
         publications.map((publication) => (
             <p>{publication.id}</p>
         ))
-      } */}
+      }
     </>
   )
 }
