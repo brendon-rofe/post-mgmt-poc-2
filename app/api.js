@@ -6,9 +6,10 @@ export const client = new createClient({
   url: APIURL
 });
 
-export const getPublications = `query Publications {
+export const getPublications = `
+query Publications($ids: [InternalPublicationId!]) {
   publications(request: {
-    publicationIds: ["0x12-0x02", "0x12-0x01"],
+    publicationIds: $ids,
     limit: 10
   }) {
     items {
